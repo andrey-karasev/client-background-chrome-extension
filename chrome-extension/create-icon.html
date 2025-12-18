@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>Create Icon</title></head>
+<body>
+<canvas id="canvas" width="48" height="48"></canvas>
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+ctx.fillStyle = '#4285f4';
+ctx.beginPath();
+ctx.arc(24, 24, 20, 0, 2 * Math.PI);
+ctx.fill();
+ctx.strokeStyle = '#ffffff';
+ctx.lineWidth = 3;
+ctx.beginPath();
+ctx.moveTo(12, 24); ctx.lineTo(36, 24);
+ctx.moveTo(24, 12); ctx.lineTo(24, 36);
+ctx.stroke();
+const link = document.createElement('a');
+link.download = 'icon48.png';
+link.href = canvas.toDataURL();
+link.click();
+</script>
+</body>
+</html>

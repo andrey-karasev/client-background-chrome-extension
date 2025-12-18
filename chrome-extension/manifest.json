@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Background Toggle Extension",
+  "version": "1.0",
+  "icons": {
+    "48": "icon.png"
+  },
+  "background": {
+    "service_worker": "dist/background.js"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["dist/content.js"]
+  }],
+  "permissions": ["activeTab", "alarms"]
+}

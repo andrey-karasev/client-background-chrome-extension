@@ -1,0 +1,17 @@
+{
+  "name": "chrome-extension-background-toggle",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "esbuild src/background.ts src/content.ts --bundle --outdir=dist --target=es2020",
+    "lint": "eslint src/**/*.ts",
+    "dev": "npm run build -- --watch"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.254",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "esbuild": "^0.19.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
